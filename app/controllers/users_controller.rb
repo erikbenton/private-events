@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	if @user.save
   		flash.now[:success] = "New user created"
-  		render 'show'
+  		redirect_to root_url
   	else
 			flash.now[:danger] = "Unable to create user"
 			render 'new'

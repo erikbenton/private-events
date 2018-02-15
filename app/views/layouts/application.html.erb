@@ -11,6 +11,9 @@
   <body>
   	<%= render "layouts/header" %>
   	<div class="container">
+      <% if !session[:user_id].nil? %>
+        <h3>Hello, <%= User.find_by(id: session[:user_id]).name %></h3>
+      <% end %>
       <% flash.each do |message_type, message| %>
       <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
       <% end %>
