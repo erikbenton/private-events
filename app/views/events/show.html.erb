@@ -22,3 +22,15 @@
 <p>
 	<%= @event.creator.name %>
 </p>
+
+<h3>Attend?</h3>
+
+
+<% if @attendants.any? %>
+	<h3>Attendants</h3>
+	<ul>
+		<% @attendants.each do |attendant| %>
+			<li><%= attendant.name %></li>
+		<% end %>
+	</ul>
+<% end %>

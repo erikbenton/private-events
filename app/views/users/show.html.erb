@@ -1,7 +1,18 @@
 <h1>User Events</h1>
 
+<h3>Created Events</h3>
 <ul>
 	<% @user.events.each do |event| %>
 		<li><%= link_to event.title, event %> @ <%= event.location %></li>
 	<% end %>
 </ul>
+
+<h3>Upcoming Attendances</h3>
+<ul>
+	<% @user.attended_events.each do |event| %>
+		<li><%= link_to event.title, event %> @ <%= event.location %></li>
+	<% end %>
+</ul>
+
+
+<h3>Past Attendances</h3>

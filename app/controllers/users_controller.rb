@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: current_user.id) if logged_in?
+    @attended_events = @user.attended_events
   end
 
   private
