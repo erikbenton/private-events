@@ -10,4 +10,15 @@ class User < ApplicationRecord
 	has_secure_password
 	validates :password, presence: true
 
+	# def upcoming_events
+	# 	self.attended_events.where("date >= ?", Time.now)
+	# end
+
+	# def previous_events
+	# 	self.attended_events.where("date < ?", Time.now)
+	# end
+
+	private
+		
+
 end
